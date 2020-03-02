@@ -1,0 +1,14 @@
+2020-02-26 13:32:25,725 [main] INFO com.odoo.webutils.OdooListeners - Suite Execution starts
+2020-02-26 13:32:33,167 [main] INFO com.odoo.webutils.OdooListeners - chrome launched in Windows platform and headless: false
+2020-02-26 13:32:43,041 [main] INFO com.odoo.webutils.OdooListeners - validLogin script execution starts
+2020-02-26 13:32:43,255 [main] INFO com.odoo.webutils.OdooListeners - Finding Element with locator: By.xpath: //input[@id='login']
+2020-02-26 13:32:44,719 [main] INFO com.odoo.webutils.OdooListeners - Finding Element with locator: By.xpath: //input[@id='password']
+2020-02-26 13:32:45,200 [main] INFO com.odoo.webutils.OdooListeners - Finding Element with locator: By.xpath: //button[text()='Log in']
+2020-02-26 13:32:50,036 [main] INFO com.odoo.webutils.OdooListeners - validLogin script is passed
+2020-02-26 13:32:50,247 [main] INFO com.odoo.webutils.OdooListeners - Total suite execution time: 24.0seconds
+2020-02-26 13:32:50,248 [main] INFO com.odoo.webutils.OdooListeners - Suite Execution ends
+2020-02-26 13:32:50,609 [main] INFO com.odoo.webutils.OdooListeners - Browser Closed
+2020-02-26 13:32:50,625 [main] INFO com.odoo.webutils.OdooListeners - Total scripts executed: 1
+2020-02-26 13:32:50,630 [main] INFO com.odoo.webutils.OdooListeners - Total scripts passed: 1
+2020-02-26 13:32:50,632 [main] INFO com.odoo.webutils.OdooListeners - Total scripts failed: 0
+2020-02-26 13:32:50,640 [main] INFO com.odoo.webutils.OdooListeners - Total scripts skipped: 0

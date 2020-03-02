@@ -1,0 +1,11 @@
+2020-02-26 13:30:28,380 [main] INFO com.odoo.webutils.OdooListeners - Suite Execution starts
+2020-02-26 13:30:55,459 [main] INFO com.odoo.webutils.OdooListeners - chrome launched in Windows platform and headless: false
+2020-02-26 13:30:55,822 [main] INFO com.odoo.webutils.OdooListeners - validLogin script execution starts
+2020-02-26 13:30:55,850 [main] WARN com.odoo.webutils.OdooListeners - validLogin script is skipped
+2020-02-26 13:30:57,067 [main] INFO com.odoo.webutils.OdooListeners - Total suite execution time: 29.0seconds
+2020-02-26 13:30:57,067 [main] INFO com.odoo.webutils.OdooListeners - Suite Execution ends
+2020-02-26 13:30:57,520 [main] INFO com.odoo.webutils.OdooListeners - Browser Closed
+2020-02-26 13:30:57,520 [main] INFO com.odoo.webutils.OdooListeners - Total scripts executed: 1
+2020-02-26 13:30:57,520 [main] INFO com.odoo.webutils.OdooListeners - Total scripts passed: 0
+2020-02-26 13:30:57,520 [main] INFO com.odoo.webutils.OdooListeners - Total scripts failed: 0
+2020-02-26 13:30:57,520 [main] INFO com.odoo.webutils.OdooListeners - Total scripts skipped: 1
