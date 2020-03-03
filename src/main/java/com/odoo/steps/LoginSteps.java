@@ -3,6 +3,7 @@ package com.odoo.steps;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import com.odoo.generic.PageLib;
 import com.odoo.pageobjects.LoginPage;
 
 import io.qameta.allure.Step;
@@ -11,10 +12,12 @@ public class LoginSteps
 {
 	WebDriver driver;
 	LoginPage lp;
+	PageLib plib;
 	
 	public LoginSteps(WebDriver driver)
 	{
 		this.driver=driver;
+		plib=new PageLib(driver);
 		lp=new LoginPage();
 	}
 	

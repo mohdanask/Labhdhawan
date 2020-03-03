@@ -19,6 +19,6 @@ public class LoginTest extends BaseAbstractTest
 		String filepath=GenericLib.dir+"/testdata/Odoodata.xlsx";
 		ExcelLib elib=new ExcelLib(filepath);
 		String[] data = elib.readData("validLogin_ID", "Sheet1");
-		lf.login(data[1], data[2]);	
+		lf.validLogin(data[1], data[2]);	
 	}
 }

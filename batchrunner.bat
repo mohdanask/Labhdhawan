@@ -1,0 +1,1 @@
+mvn -Dplatform=Windows -Dbrowser=chrome -Dheadless=false -Durl=https://diganta.odoo.com/web/login -Dsuite=logintest.xml clean test
