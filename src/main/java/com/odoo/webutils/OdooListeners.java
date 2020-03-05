@@ -1,9 +1,11 @@
 package com.odoo.webutils;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Properties;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -12,6 +14,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -26,6 +29,7 @@ public class OdooListeners implements ITestListener, WebDriverEventListener
 	public static int executionCount, passCount, failCount, skipCount = 0;
 	public static Logger log;
 	long startTime;
+	String platformName, browserName, headless = null;
 	
 	public void beforeFindBy(By by, WebElement element, WebDriver driver) 
 	{
@@ -47,9 +51,9 @@ public class OdooListeners implements ITestListener, WebDriverEventListener
 		PropertyConfigurator.configure("log4j.properties");
 		log=Logger.getLogger(OdooListeners.class);
 		log.info("Suite Execution starts");
-		String platformName = System.getProperty("platform");
-		String browserName = System.getProperty("browser");
-		String headless = System.getProperty("headless");
+		platformName = System.getProperty("platform");
+		browserName  = System.getProperty("browser");
+		headless  = System.getProperty("headless");
 		WebDriver driver = BrowserFactory.launchBrowser(platformName, browserName, headless);
 		log.info(browserName+ " launched in "+platformName+
 				                       " platform and headless: "+headless);
@@ -58,6 +62,8 @@ public class OdooListeners implements ITestListener, WebDriverEventListener
 	
 	public void onFinish(ITestContext context) 
 	{
+		RemoteWebDriver rwd= (RemoteWebDriver) Driver.getDriver();
+		String browserVersion = rwd.getCapabilities().getVersion();
 		long stopTime = System.currentTimeMillis();
 		double totalTime = (stopTime-startTime)/1000;
 		log.info("Total suite execution time: "+totalTime+"seconds");
@@ -68,6 +74,21 @@ public class OdooListeners implements ITestListener, WebDriverEventListener
 		log.info("Total scripts passed: "+passCount);
 		log.info("Total scripts failed: "+failCount);
 		log.info("Total scripts skipped: "+skipCount);
+		
+		Properties prop=new Properties();
+		prop.setProperty("Platform", platformName);
+		prop.setProperty("Browser", browserName);
+		prop.setProperty("Browser version", browserVersion);
+		prop.setProperty("Headless Execution", headless);
+		try
+		{
+			FileOutputStream fos=new FileOutputStream(new File(GenericLib.dir+"/target/allure-results"));
+			prop.store(fos, "Environment details");
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
 	}
 	
 	public void onTestStart(ITestResult result)
@@ -106,10 +127,6 @@ public class OdooListeners implements ITestListener, WebDriverEventListener
 		skipCount++;
 		log.warn(result.getName()+" script is skipped");
 	}
-	
-	
-	
-	
 	
 	
 	
