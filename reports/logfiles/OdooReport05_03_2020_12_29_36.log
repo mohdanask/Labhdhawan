@@ -1,0 +1,18 @@
+2020-03-05 12:29:36,766 [main] INFO com.odoo.webutils.OdooListeners - Suite Execution starts
+2020-03-05 12:29:42,479 [main] INFO com.odoo.webutils.OdooListeners - chrome launched in Windows platform and headless: false
+2020-03-05 12:30:04,326 [main] FATAL com.odoo.webutils.OdooListeners - timeout: Timed out receiving message from renderer: -0.003
+  (Session info: chrome=80.0.3987.132)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LENOVO', ip: '192.168.1.18', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_66'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.132, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\Owner\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a5a48012c824cc9d1873fed3578e5e5b
+2020-03-05 12:30:05,749 [main] INFO com.odoo.webutils.OdooListeners - validLogin script execution starts
+2020-03-05 12:30:05,763 [main] WARN com.odoo.webutils.OdooListeners - validLogin script is skipped
+2020-03-05 12:30:10,208 [main] INFO com.odoo.webutils.OdooListeners - Total suite execution time: 33.0seconds
+2020-03-05 12:30:10,209 [main] INFO com.odoo.webutils.OdooListeners - Suite Execution ends
+2020-03-05 12:30:14,516 [main] INFO com.odoo.webutils.OdooListeners - Browser Closed
+2020-03-05 12:30:14,516 [main] INFO com.odoo.webutils.OdooListeners - Total scripts executed: 1
+2020-03-05 12:30:14,516 [main] INFO com.odoo.webutils.OdooListeners - Total scripts passed: 0
+2020-03-05 12:30:14,531 [main] INFO com.odoo.webutils.OdooListeners - Total scripts failed: 0
+2020-03-05 12:30:14,531 [main] INFO com.odoo.webutils.OdooListeners - Total scripts skipped: 1

@@ -82,7 +82,7 @@ public class OdooListeners implements ITestListener, WebDriverEventListener
 		prop.setProperty("Headless Execution", headless);
 		try
 		{
-			FileOutputStream fos=new FileOutputStream(new File(GenericLib.dir+"/target/allure-results"));
+			FileOutputStream fos=new FileOutputStream(new File(GenericLib.dir+"/target/allure-results/environment.properties"));
 			prop.store(fos, "Environment details");
 		}
 		catch(IOException e)
