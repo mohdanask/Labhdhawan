@@ -79,11 +79,12 @@ public class PageLib
 		return ele;
 	}
 	
-	public void clickCheckbox(String xpath)
+	public void verifyCheckbox(String xpath)
 	{
 		WebElement chkBx = driver.findElement(By.xpath(xpath));
 		if (chkBx.isSelected()) 
 		{
+			
 		}
 		else
 		{

@@ -31,4 +31,30 @@ public class CommonSteps
 		//plib.eWaitForelementPresent(20, bp.crmMenu);
 		Assert.assertTrue(driver.findElement(By.xpath(bp.crmMenu)).isDisplayed());
 	}
+	
+	@Step("Clicking Crm")
+	public void clickCRM()
+	{
+		driver.findElement(By.xpath(bp.crmMenu)).click();
+	}
+	
+	@Step("Clicking Configuration")
+	public void clickConfiguration()
+	{
+		driver.findElement(By.xpath(bp.configurationMenu)).click();
+	}
+	
+	@Step("Clicking SalesTeam")
+	public void clickSalesTeam()
+	{
+		driver.findElement(By.xpath(bp.salesTeamSubMenu)).click();
+	}
+	
+	@Step("Clicking SalesTeam")
+	public void clickSettings()
+	{
+		driver.findElement(By.xpath(bp.settingsSubMenu)).click();
+	}
+	
+	
 }
