@@ -65,16 +65,30 @@ public class PageLib
 		act.release(source).perform();
 	}
 	
-	public void eWaitForelementPresent(int seconds, String xpath)
+	public WebElement eWaitForelementPresent(int seconds, String xpath)
 	{
 		WebDriverWait wait=new WebDriverWait(driver, seconds);
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
+		WebElement ele = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
+		return ele;
 	}
 	
-	public void eWaitForElementVisible(int seconds, String xpath)
+	public WebElement eWaitForElementVisible(int seconds, String xpath)
 	{
 		WebDriverWait wait=new WebDriverWait(driver, seconds);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+		WebElement ele = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+		return ele;
+	}
+	
+	public void clickCheckbox(String xpath)
+	{
+		WebElement chkBx = driver.findElement(By.xpath(xpath));
+		if (chkBx.isSelected()) 
+		{
+		}
+		else
+		{
+			chkBx.click();
+		}
 	}
 	
 
